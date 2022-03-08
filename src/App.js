@@ -4,22 +4,23 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component.jsx';
 
 const HatsPage = () => (
 <div>
-  <h1>HATS page</h1>
-</div>
+  <h1>HATS page</h1> 
+</div>  
 );
 
 function App() {
   return (
-    <BrowserRouter>
+    <div>
+    <Header />
       <Routes>
         <Route path='/' element={<HomePage />} /> 
         <Route path='/shop' element={<ShopPage/>} />
-
-</Routes>
-    </BrowserRouter>
+      </Routes>
+    </div>
   );
 }
 
