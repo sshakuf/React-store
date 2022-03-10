@@ -21,15 +21,15 @@ class SignIn extends React.Component {
     };
 
     handleChange = event => {
-        const { value, name } = event;
+        const { value, name } = event.target;
         this.setState({ [name]: value });
     };
     
     render() { 
         return ( 
             <div className="sign-in">
-            <h2>I alredy have an account</h2>
-            <span>Sign in with your email and password</span>
+            <h2 className="title">I alredy have an account</h2>
+            <span>Sign up with your email and password</span>
 
             <form onSubmit={this.handleSubmit}>
             <FormInput 
